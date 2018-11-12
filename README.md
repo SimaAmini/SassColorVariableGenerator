@@ -1,6 +1,8 @@
 # SassColorVariableGenerator
 Sass Color Variable Generator
 
+<a href="https://simaamini.github.io/SassColorVariableGenerator/">Demo</a>
+
 ## Getting started
 
 - Clone this repository
