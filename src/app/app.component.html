@@ -1,0 +1,53 @@
+<div class="container">
+  <header>
+    <h4>Sass Color Varibale Generator</h4>
+    <hr />
+  </header>
+  <section>
+    <small>
+      if you are not ok with the way I named the variables , go ahead and change
+      them.
+    </small>
+    <br />
+
+    <label id="colorLabel" *ngIf="!editMode">{{ color.name }}: </label>
+    <input *ngIf="editMode" [(ngModel)]="color.name" id="colorInput" />
+    <input
+      class="color-input"
+      (colorPickerChange)="changeColor($event)"
+      (cpSliderChange)="changeColor($event)"
+      [(ngModel)]="color.value"
+      [value]="color.value"
+      [style.background]="color.value"
+      [cpCancelButton]="true"
+      [cpCancelButtonClass]="'btn btn-primary btn-xs'"
+      [(colorPicker)]="color.value"
+    />
+  </section>
+
+  <section class="code-block">
+    <button class="copy-btn" (click)="copyToClipboard()">copy</button>
+    <code #code>
+      <span>
+        <span class="color-name">{{ color.name }}: </span>
+        <span class="color-value" [style.color]="color.value">
+          {{ color.value }} </span
+        >; <br />
+      </span>
+
+      <span>
+        <span class="color-name">{{ color.name }}-dark: </span>
+        <span class="color-value" [style.color]="color.valueDark">
+          {{ color.valueDark }} </span
+        >;
+      </span>
+      <br />
+      <span>
+        <span class="color-name">{{ color.name }}-light: </span>
+        <span class="color-value" [style.color]="color.valueLight">
+          {{ color.valueLight }} </span
+        >;
+      </span>
+    </code>
+  </section>
+</div>

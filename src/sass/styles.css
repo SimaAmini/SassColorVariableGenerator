@@ -1,0 +1,27 @@
+body {
+  background-color: rgba(206, 59, 59, 0.533);
+}
+
+.code-block {
+  background-color: darkslategray;
+  color: antiquewhite;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10%;
+  position: relative;
+}
+
+.code-block .copy-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.code-block .color-value {
+  color: coral;
+}
+
+span {
+  display: inline;
+}
+/*# sourceMappingURL=styles.css.map */

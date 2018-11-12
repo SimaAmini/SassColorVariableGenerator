@@ -1,0 +1,40 @@
+@import "./functions";
+@import "./variables";
+@import "./mixins";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color;
+}
+.container {
+  padding: 20px;
+}
+.color-input {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: unset !important;
+}
+.code-block {
+  background-color: darkslategray;
+  color: antiquewhite;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10%;
+  position: relative;
+
+  .copy-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .color-value {
+    color: coral;
+  }
+}
+span {
+  display: inline;
+}
